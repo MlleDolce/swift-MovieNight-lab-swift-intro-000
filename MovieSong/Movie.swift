@@ -18,6 +18,11 @@ protocol MovieImageDelegate {
 final class Movie {
     
     // TODO: Instruction #1, create instance properties
+    var title: String
+    var year: Int
+    var rated: String
+    var imdbID: String
+    var posterURLString: String?
 
     // TODO: Instruction #4, create more instance properties
     
