@@ -19,7 +19,7 @@ final class Movie {
     
     // TODO: Instruction #1, create instance properties
     var title: String
-    var year: Int
+    var year: String
     var rated: String
     var imdbID: String
     var posterURLString: String?
@@ -38,7 +38,13 @@ final class Movie {
     
     
     // TODO: Instruction #2, create Initializer 
-
+    init(movieJSON: [String : String]) {
+        self.title = movieJSON["Title"] ?? "No Title"
+        self.year = movieJSON["Year"] ?? "No Year"
+        self.rated = movieJSON["Rated"] ?? "No Rating"
+        self.imdbID = movieJSON["imdbID"] ?? "No imdbID"
+        self.posterURLString = movieJSON["Poster"]
+    }
     
     // TODO: Instruction #4, create the updateFilmInfo(_:) method
     
